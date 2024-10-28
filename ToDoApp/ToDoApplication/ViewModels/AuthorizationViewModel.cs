@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ToDoApplication.Command;
-
+using ToDoApplication.Views;
 
 
 namespace ToDoApplication.ViewModels
@@ -21,11 +21,11 @@ namespace ToDoApplication.ViewModels
                     new MainView().ShowDialog();
 
             });
-            
             RegisterCommand = new RelayCommand(o =>
             {
                 UserService.AddUser(lastname, firstname, middlename, login, password);
             });
+        }
 
         private string firstname = string.Empty;
         private string lastname = string.Empty;
